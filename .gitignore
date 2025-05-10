@@ -1,0 +1,40 @@
+# --- Reflex & Project Specific ---
+.states
+.web/
+assets/external/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+.ENV/
+ENV/
+
+# --- Environment Variables ---
+*.env
+*.env.*
+
+# --- Logs ---
+*.log
+
+# --- Editor Configurations ---
+.vscode/
+.idea/
+
+# --- OS Specific Files ---
+.DS_Store
+Thumbs.db
+
+# --- Testing and Coverage ---
+htmlcov/
+.tox/
+.coverage
+.cache/
