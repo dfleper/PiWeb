@@ -1,6 +1,6 @@
 import reflex as rx
 from rxconfig import config
-from PiWeb.pages import register
+from PiWeb.pages import register, forgot
 
 class State(rx.State):
     """The app state."""
@@ -55,7 +55,7 @@ def login_default() -> rx.Component:
                         ),
                         rx.link(
                             "Forgot password?",
-                            href="#",
+                            href="/forgot",
                             size="3",
                         ),
                         justify="between",
@@ -92,4 +92,4 @@ def login_default() -> rx.Component:
 app = rx.App()
 app.add_page(login_default, route="/", title="Login | Piweb")
 app.add_page(register.signup_default, route="/register", title="Register | PiWeb")
-
+app.add_page(forgot.forgot_password, route="/forgot", title="Forgot Password | PiWeb")
