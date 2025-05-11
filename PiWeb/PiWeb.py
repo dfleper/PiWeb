@@ -1,5 +1,6 @@
 import reflex as rx
 from rxconfig import config
+from PiWeb.pages import register
 
 class State(rx.State):
     """The app state."""
@@ -72,7 +73,7 @@ def login_default() -> rx.Component:
                 rx.button("Sign in", size="3", width="100%"),
                 rx.center(
                     rx.text("New here?", size="3"),
-                    rx.link("Sign up", href="#", size="3"),
+                    rx.link("Sign up", href="/register", size="3"),
                     opacity="0.8",
                     spacing="2",
                     direction="row",
@@ -90,4 +91,5 @@ def login_default() -> rx.Component:
 
 app = rx.App()
 app.add_page(login_default, route="/", title="Login | Piweb")
+app.add_page(register.signup_default, route="/register", title="Register | PiWeb")
 
